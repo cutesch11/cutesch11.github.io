@@ -29,7 +29,12 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Projects
+                    <a class="nav-link" href="#" onclick="showHome()">Home
+                        <span class="sr-only"></span>
+                    </a>
+                </li>        
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" onclick="showProjects()">Projects
                         <span class="sr-only"></span>
                     </a>
                 </li>
@@ -58,10 +63,11 @@
     </nav>
 
     <div class="container">
-        <div class="starter-template">
+        <div class="starter-template" id="div-main">
             <h1>Software Engineering Portfolio for Caleb Utesch</h1>
             <br>
             <br>
+            <img src="files/caleb.jpg">
             <p class="lead">
                 This is a placeholder that will contain the first three required components of the portfolio (Name/Contact Info. , purpose
                 description, and career objective paragraph
@@ -85,7 +91,6 @@
                 </li>
             </ul>
         </div>
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
@@ -95,6 +100,29 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
+    <script>
+        function showProjects() {
+            var projectsHTML = 
+            "<h1>Projects</h1>" + 
+            "";
+            $('#div-main').html(projectsHTML);
+        }
+
+        function showHome() {
+            var homeHTML = 
+            "<h1>Software Engineering Portfolio for Caleb Utesch</h1>" +
+            "<br><br>" + 
+            "<p class='lead'>" + 
+                "This is a placeholder that will contain the first three required components of the portfolio (Name/Contact Info. , purpose" + 
+                "description, and career objective paragraph" +
+            "<br></p><br><br><p>" +
+                "The navbar above will contain links to the different sections of the portfolio" +
+            "</p><br><br><p>" +
+                "The following projects will be featured in the portfolio:" +
+            "</p>";
+            $("#div-main").html(homeHTML);
+        }
+    </script>
 </body>
 
 </html>
