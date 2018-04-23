@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Caleb Utesch</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
@@ -39,7 +39,7 @@
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Writings
+                    <a class="nav-link" href="#" onclick="showWritings()">Writings
                         <span class="sr-only"></span>
                     </a>
                 </li>
@@ -54,7 +54,7 @@
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Resume
+                    <a class="nav-link" href="#" onclick="showResume()">Resume
                         <span class="sr-only"></span>
                     </a>
                 </li>
@@ -68,28 +68,20 @@
             <br>
             <br>
             <img src="files/caleb.jpg" style="width:200px">
-            <p class="lead">
-                This is a placeholder that will contain the first three required components of the portfolio (Name/Contact Info. , purpose
-                description, and career objective paragraph
-                <br>
-            </p>
             <br>
             <br>
             <p>
-                The navbar above will contain links to the different sections of the portfolio
+                <span style="font-weight: bold">Contact Info:</span> <br>
+                Phone: (515)-231-0187 <br>
+                Email: cutesch@iastate.edu                
             </p>
             <br>
             <br>
-            <p>
-                The following projects will be featured in the portfolio:
+            <p style="text-align:justify">
+                I'm an Ames, Iowa native graduating from ISU in December 2018 currently seeking a full-time employment oppportunity after graduation. I have experience from interships
+                mostly doing front-end web development, and am looking to expand my skillset in other types of software development once I'm employed full-time. When I'm not busy developing software I enjoy
+                swimming, playing piano, and hanging out with friends.
             </p>
-            <ul class="list-group">
-                <li class="list-group-item">1. Hirelink (COMS 309)</li>
-                <li class="list-group-item"> 2. JS Canvas Brick Breaker game (COMS 319)
-                </li>
-                <li class="list-group-item"> 3. Angular Rate Interpolator POC (Internship)
-                </li>
-            </ul>
         </div>
     </div>
 
@@ -103,24 +95,71 @@
     <script>
         function showProjects() {
             var projectsHTML = 
-            "<h1>Projects</h1>" + 
-            "";
+            "<h1>Projects</h1> <br><br>" + 
+            "<p style='font-weight: bold'>Hirelink</p>" + 
+            "<p style='text-align: justify'>This project was a group project implemented for Computer Science 309. The project was an android mobile app developed using android studio. The app was meant to be a sort of variation of LinkedIn that had a social media aspect added to it where users could leave reviews of companies they worked at, and other users could comment and like on posts about companies. The main new skills that I gained out of this project was learning mobile app development, and learning to use a VCS in a group project. I had never worked on large group project like this, and learning how to use Git in order to manage our group’s project code was a very good experience to have. Like most 309 projects, we were not able to implement all the features that we had originally intended to due to time constraints. Even though the finished project wasn’t as fully fleshed out as we had hoped it would be, I still gained some valuable experience learning how to work in groups on a project and what mobile app development is all about. </p>" + 
+            "<br><br>" + 
+            "<p style='font-weight: bold'>JS Canvas Brick Breaker</p>" + 
+            "<p style='text-align: justify'>This project was an individual project implemented for Computer Science 319. The project was a simplified version of the classic game Brick Breaker. It followed the same general concept of having the ultimate goal for the player being to break all the bricks on the screen by bouncing a ball off of a bar that you can move side-to-side. This project was made using the JS Canvas graphics library with a simple web interface that was written in pure HTML. I had never done any graphics programming before, so that aspect of the project was a completely new concept to me that I had to teach myself using online tutorials. Some basic graphics concepts were used in the game, such as collision detection and processing user input. Although this project wasn’t very big in scale, there were several features that were somewhat complex to write code for, and it was a really good experience to get my feet wet with graphics programming. </p>" +
+            "<p style='font-weight: bold'>Angular Rate Interpolator POC</p>" + 
+            "<p style='text-align: justify'>This project was implemented for my internship at Principal Financial Group in summer 2017. The project consisted of two web pages that displayed information about certain customer data, and performed calculations to estimate things like risk factors about loans. The project was made using Angular for the front-end and a REST API for service calls. This project was a POC that was meant to try and test out Angular as a potential front-end technology to use for the rewrite of one of the biggest web applications in the department. Once I had completed the project, I also had to give a short presentation about it, and share my thoughts on the proc and cons of Angular as a front-end technology choice. I had never used Angular before this project, and had to go through the process of watching online tutorials in order to teach myself about the technology. The experience of teaching myself a new technology, developing an important POC project for the department using that technology, and giving a presentation about it was a very engaging experience that I think helped me progress the most as a software engineer during this internship</p>"
             $('#div-main').html(projectsHTML);
         }
 
+        function showResume() {
+            var resumeHTML = 
+            "<h1>Resume</h1> <br><br>" +
+            "<p>Resume download link: <a href='files/resume.pdf' download>Resume</a></p>";
+            $('#div-main').html(resumeHTML);
+        }
         function showHome() {
             var homeHTML = 
-            "<h1>Software Engineering Portfolio for Caleb Utesch</h1>" +
-            "<br><br>" + 
-            "<p class='lead'>" + 
-                "This is a placeholder that will contain the first three required components of the portfolio (Name/Contact Info. , purpose" + 
-                "description, and career objective paragraph" +
-            "<br></p><br><br><p>" +
-                "The navbar above will contain links to the different sections of the portfolio" +
-            "</p><br><br><p>" +
-                "The following projects will be featured in the portfolio:" +
-            "</p>";
+            "<h1>Software Engineering Portfolio for Caleb Utesch</h1> <br><br>" +
+            "<img src='files/caleb.jpg' style='width:200px'> <br><br>" +
+            "<p>" +
+                "<span style='font-weight: bold'>Contact Info:</span> <br>" +
+                "Phone: (515)-231-0187 <br>" +
+                "Email: cutesch@iastate.edu" +        
+            "</p><br><br>" +
+            "<p style='text-align:justify'>" +
+                "I'm an Ames, Iowa native graduating from ISU in December 2018 currently seeking a full-time employment oppportunity after graduation. I have experience from interships" +
+                "mostly doing front-end web development, and am looking to expand my skillset in other types of software development once I'm employed full-time. When I'm not busy developing software I enjoy" +
+                "swimming, playing piano, and hanging out with friends." +
+            "</p>"; 
             $("#div-main").html(homeHTML);
+        }
+
+        function showWritings() {
+            var writingsHTML = 
+            "<h1>Writings</h1> <br><br>" + 
+            // "<p>Cumulative Reflection:</p>" +
+            "<a href='#' onclick='showCumulativeReflection()'>Cumulative Reflection</a> <br><br>" +
+            "<a href='#' onclick='showEthicsReflection()'>Ethics Essay</a> <br><br>" +
+            "<a href='#' onclick='showGenEdReflection()'>General Education Reflection</a>";
+            $("#div-main").html(writingsHTML);
+        }
+
+        function showGenEdReflection() {
+            var genEdHTML = 
+            "<p style='text-align: justify'> My most current and major short term goal is to finish my degree program in software engineering and get my bachelor’s degree from ISU. The next short term goal I have is to start my full-time career in software engineering. My preferred work environment for when I start my career would be at a company that is centered on technology rather than business. I would I also prefer the size of the company that I work at after graduation to be medium to large. Working at a company that uses the agile methodology for projects would also be a plus since I’m used to this methodology from previous internships. My main long term goal relating to my career or my “dream job” would be to work for a company that works to solve climate change, or helping create the first neurologically controlled prosthetic leg.</p>" +
+            "<p style='text-align: justify'>Personally, what I learned in my general education courses has not significantly improved my ability to formulate and evaluate engineering solutions. The only course I think may have helped me further develop my creative thinking as it relates to engineering would be Philosophy 201. In this course we were challenged to think about interesting philosophical questions and dilemmas during almost every lecture. Brainstorming ideas about these questions and analyzing different perspectives proposed definitely helped strengthen my creative thinking skills. Thinking in an analytical and creative perspective simultaneously is an important skill to have in any engineering field, as it is vital to being able to form unique, innovative solutions to complex problems.</p>" +
+            "<p style='text-align: justify'>One of the most important contexts to consider when creating engineering solutions is the societal context. Although it’s very easy to overlook what all impacts a solution you may create as an engineer will have on society, it should always be taken into consideration. For example, as a software engineer working at a big business you may be developing some software that will highly benefit the top 1% financial, which might increase the already massive wage gap in the country. This software make end up making large profits for the wealthy, which can lead to other middle to lower class families suffering and making less in wages. This is a somewhat extreme example which might not occur very often, but I think gives a good idea about how to think about what unintentional impacts on larger contexts outside of engineering, and how all engineers should be sure to consider how their proposed solutions can affect all members of society.</p>";
+            $("#div-main").html(genEdHTML);
+        }
+        function showEthicsReflection() {
+            var ethicsHTML = 
+            "<p style='text-align: justify'> If I was a software engineer working on this project, I would not have been comfortable pushing this algorithm implementation through to production. Keeping emissions reduced and doing our best to preserve the environment is one of the most important issues that I care about, and I wouldn’t have been able to write code for something like this with a clean conscience. If I was being forced or pressured by higher-ups to implement this algorithm in order to save money for the company or other reasons, I would’ve refuse and tried to rally my fellow engineers to refuse and as well and would try to get them to drop the project all together. If this opposition from my and other engineers didn’t work, I would start searching for a new job immediately as I don’t think I would feel comfortable working for a company that violates ethics openly like this. I would also contact the EPA and communicate to them that this violation of their rules was occurring, and that action should be taken as soon as possible to enact consequences on the company.</p>" +
+            "<p style='text-align: justify'>I would guess that the main reason the engineers ended up developing this algorithm was from pressure from higher-ups in the company. There was most likely a financial advantage to putting this algorithm through to production software, which higher-ups from the company thought could benefit them greatly. Although some of the engineers might not have felt comfortable with this clear violation of ethics, some of them were most likely promised to receive extra compensation. Some of the engineers also might have been worried about losing their jobs if they refused to do what the higher-ups asked. There’s also the possibility that some of them might not have been aware that this was a violation of EPA regulations and thus a violation of ethics. As mentioned in the “Engineers, Ethics, and the VW Scandal” article, ethics courses are not always extensive as they should be at universities. This could lead to some engineers who have a somewhat naïve sense of ethics, and are easily manipulated into creating products that are unethical without realizing it. </p>";
+            $("#div-main").html(ethicsHTML);
+        }
+        function showCumulativeReflection() {
+            var reflectHTML = 
+            "<p style='text-align: justify'>Overall I think ISU has done a good job preparing me to design systems and processes. Throughout my coursework I’ve had to create several projects from scratch that involve designing a somewhat complex system. These projects along with numerous lectures about system design has helped me hone that skill. Almost all engineering courses at ISU involve formulating solutions to some type of engineering problem. Through both homework and project, I’ve had lots of experience in that department and feel very prepared to solve engineering problems that are presented to my in the future. Although some courses and lectures at ISU discuss engineering solution in a global/societal context, I wouldn’t say I feel extremely well prepared to analyze a solution in this context. However, this seems like something that is a little more abstract to teach and is better learned through real-world experience. Ethics is a very important unit in several courses in the software engineering core, and is something I’ve written numerous essays on. We are challenged to consider ethics in many different perspectives and I believe it’s a subject that ISU does a very good job preparing engineering students in. </p>" + 
+            "<p style='text-align: justify'> The main thing I’ve done at ISU to prepare for working in groups is to actually work in a group for a large project. There are several courses throughout the software engineering program that involve large group projects, and I think working in groups on these types of projects has given me good experience for group work in a professional setting. Although this isn’t directly related, I think studying ethics in courses at ISU has somewhat improved my ability to recognize contemporary issues. Reading case studies of contemporary ethical dilemmas has trained my brain to analyze the ethics of situations like these without being prompted to do so. As discussed above, I believe that ISU has done a very good job in deepening my understanding of ethical and professional responsibility through both course lectures and required readings and writings for coursework.</p>" + 
+            "<p style='text-align: justify'>A good example that comes to mind of drawing from resources outside of those provided in class is research that my team conducted for our senior design project. Our project involves applying several machine learning algorithms to analyze stock factor data. Only one of our team members had experience with machine learning algorithms so there was a fair amount of research that the rest of us needed to do in order to understand them and how to apply them. Our client provided us with several academic papers to review and learn from, which we took advantage of. We also did individual research to find more academic papers to analyze outside those provided by our client, which we all found very helpful to understand the inner workings of the algorithm we are using.</p>" +
+            "<p style='text-align: justify'> Throughout my time at ISU I attended several seminars centered on new technologies being developed that I think helped me understand the importance of lifelong learning. In the field of software engineering, there is almost constantly a new frameworks or programming paradigms being developed. In order to keep up with the advances in technology and software development to stay competitive, you must constantly be learning these new software practices as they come out because all other software developers are also learning them. Constantly learning new things is also often conducive to being able to think of more creative solutions to problems. Learning about a different possible way to implement a solution than one that you’re used to encourages you to think in more perspectives and better formulate effective ideas.</p>" +
+            "<p style='text-align: justify'> I try to learn about at least one new software framework or technology every month or so. There are lots of online resources that are effective to learn about these types of things, and I think it’s a good practice in order to try and stay in the loop of current software development practices. Learning about these new technologies and comparing them to ones that I use or have used in the past has helped me develop confidence as a software developer. Knowing about these different technologies encourages me to consider the implementation of a solution to a problem and which one might be the best before I even start programming. With regards to learning activities outside of the classroom, one thing I might’ve done differently is try out more student organizations. Joining organizations within your major can be a great way to learn about different people’s perspectives on aspects of problem solving and formulating effective solutions. Having discussions about things like these in an informal setting such as a student organization is a unique way to better develop your engineering skills, and is something that I think I should’ve utilized more throughout my undergraduate work.</p>";
+            $("#div-main").html(reflectHTML);
         }
     </script>
 </body>
