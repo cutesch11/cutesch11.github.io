@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon">
     <title>Caleb Utesch</title>
 
     <!-- Bootstrap core CSS -->
@@ -44,12 +45,12 @@
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Experience
+                    <a class="nav-link" href="#" onclick="showExperience()">Experience
                         <span class="sr-only"></span>
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Senior Design
+                    <a class="nav-link" href="#" onclick="showSD()">Senior Design
                         <span class="sr-only"></span>
                     </a>
                 </li>
@@ -96,15 +97,59 @@
             var projectsHTML = 
             "<h1>Projects</h1> <br><br>" + 
             "<p style='font-weight: bold'>Hirelink</p>" + 
-            "<p style='text-align: justify'>This project was a group project implemented for Computer Science 309. The project was an android mobile app developed using android studio. The app was meant to be a sort of variation of LinkedIn that had a social media aspect added to it where users could leave reviews of companies they worked at, and other users could comment and like on posts about companies. The main new skills that I gained out of this project was learning mobile app development, and learning to use a VCS in a group project. I had never worked on large group project like this, and learning how to use Git in order to manage our group’s project code was a very good experience to have. Like most 309 projects, we were not able to implement all the features that we had originally intended to due to time constraints. Even though the finished project wasn’t as fully fleshed out as we had hoped it would be, I still gained some valuable experience learning how to work in groups on a project and what mobile app development is all about. </p>" + 
-            "<br><br>" + 
+            "<p style='text-align: justify'><span style='font-weight: bold'>Role: </span> Meeting Scheduler and Front-end engineer. As meeting scheduler, I worked with the team members to form a regular schedule for meeting related to project work that needed to be done together. As a front-end engineer, most of my time spent working on tehnical work involved developing and tuning the front-end of the app to try and make it look nice and presentable.</p>" +
+            "<p style='text-align: justify'><span style='font-weight: bold'>Description: </span>This project was a group project implemented for Computer Science 309. The project was an android mobile app developed using android studio. The app was meant to be a sort of variation of LinkedIn that had a social media aspect added to it where users could leave reviews of companies they worked at, and other users could comment and like on posts about companies. The main new skills that I gained out of this project was learning mobile app development, and learning to use a VCS in a group project. I had never worked on large group project like this, and learning how to use Git in order to manage our group’s project code was a very good experience to have. Like most 309 projects, we were not able to implement all the features that we had originally intended to due to time constraints. Even though the finished project wasn’t as fully fleshed out as we had hoped it would be, I still gained some valuable experience learning how to work in groups on a project and what mobile app development is all about. </p>" + 
+            "<br>" + 
             "<p style='font-weight: bold'>JS Canvas Brick Breaker</p>" + 
             "<p style='text-align: justify'>This project was an individual project implemented for Computer Science 319. The project was a simplified version of the classic game Brick Breaker. It followed the same general concept of having the ultimate goal for the player being to break all the bricks on the screen by bouncing a ball off of a bar that you can move side-to-side. This project was made using the JS Canvas graphics library with a simple web interface that was written in pure HTML. I had never done any graphics programming before, so that aspect of the project was a completely new concept to me that I had to teach myself using online tutorials. Some basic graphics concepts were used in the game, such as collision detection and processing user input. Although this project wasn’t very big in scale, there were several features that were somewhat complex to write code for, and it was a really good experience to get my feet wet with graphics programming. </p>" +
-            "<p style='font-weight: bold'>Angular Rate Interpolator POC</p>" + 
+            "<br>" +
+            "<p style='font-weight: bold'>AngularJS Rate Interpolator POC</p>" + 
             "<p style='text-align: justify'>This project was implemented for my internship at Principal Financial Group in summer 2017. The project consisted of two web pages that displayed information about certain customer data, and performed calculations to estimate things like risk factors about loans. The project was made using Angular for the front-end and a REST API for service calls. This project was a POC that was meant to try and test out Angular as a potential front-end technology to use for the rewrite of one of the biggest web applications in the department. Once I had completed the project, I also had to give a short presentation about it, and share my thoughts on the proc and cons of Angular as a front-end technology choice. I had never used Angular before this project, and had to go through the process of watching online tutorials in order to teach myself about the technology. The experience of teaching myself a new technology, developing an important POC project for the department using that technology, and giving a presentation about it was a very engaging experience that I think helped me progress the most as a software engineer during this internship</p>"
             $('#div-main').html(projectsHTML);
         }
 
+        function showExperience() {
+            var html =
+            "<h1>Experience</h1> <br>" +
+            "<h3>Skills</h3><br>" +
+            "<ul>" +
+            "<li style='text-align: justify'>Familiar with commonly used modern programming paradigms such as OOP, MVC pattern, and clientserver architecture</li><br>" +
+            "<li style='text-align: justify'>Proficient in VBA, Java, C, C#, and JavaScript programming languages; Have experience with C++, SQL,and PHP languages as well as AngularJS, JQuery, NodeJS, and .NET frameworks</li><br>" +
+            "<li style='text-align: justify'>Familiar with using Linux/UNIX-like systems and terminal controls to perform tasks as well as assembly language concepts</li>" +
+            "</ul> <br><br>" +
+            "<h3>Employment History</h3><br>" +
+            "<p><span style='font-weight: bold'>Software Development Intern at Sciengistics Inc.,</span> West Des Moines, IA Summer of 2016</p>" +
+            "<ul>" +
+            "<li style='text-align: justify'>Added new features and updated existing ones to company’s main product RosterApps, a web-based scheduling application </li>" +
+            "<br><li style='text-align: justify'>Helped test and debug code to improve the quality of the company’s software products</li>" +
+            "<br><li style='text-align: justify'>Developed a new multi-page feature that gave users in RosterApps the ability to edit multiple shifts at once </li>" +
+            "</ul><br><br>" +
+            "<p><span style='font-weight: bold'>Application Development Intern at Principal Financial Group,</span> Des Moines, IA Summer of 2017</p>" +
+            "<ul>" +
+            "<br><li style='text-align: justify'>Worked in an Agile setting on a scrum team of approximately 10 people working on web development projects</li>" +
+            "<br><li style='text-align: justify'>Completed several smaller projects that included rewriting code modules, writing new stored procedure scripts and creating new business reports</li>" +
+            "<br><li style='text-align: justify'>Developed a Proof of Concept as part of the re-writing process of one of our division’s biggest applications </li>" +
+            "</ul>"
+
+            $('#div-main').html(html);
+        }
+        function showSD() {
+            var html = 
+            "<h1>Senior Design</h1> <br>" +
+            "<p><span style='font-weight: bold'>Link to website for more info.: </span><a href='http://sddec18-13.sd.ece.iastate.edu/' target='_blank'>Senior Design Webpage</a></p> <br>" +
+            "<p style='text-align: justify'><span style='font-weight: bold'>Team Role: </span>Meeting Scribe and Feature Selection Engineer. As the meeting scribe for our team, I took notes at each meeting throughout the semester and shared them with all team members as well as our faculty advisor. As a feature selection engineer, almost all of my technical work was focused on learning about feature selection techniques, and getting them implemented to produce results for our models to use.</p>" +
+            "<br>" +
+            "<h3>Problem Statement</h3>" +
+            "<p style='text-align: justify'>Investment analysis at Principal Financial Group currently relies on human calculation, using a variety of models and inputs. These statistical models are proven and effective, although the dependence upon human-given inputs and calculations is both inefficient and unreliable. Various steps of the statistical analysis process can be automated through software. This  would remove most of the potential for human error, expedite the decision making process, and reduce overhead costs by making accurate statistical modeling and prediction more accessible.</p>" +
+            "<br>" +
+            "<h3>Objective</h3>" +
+            "<p style='text-align: justify'>The objective of the proposed project of Asset Management is of two parts. One is a simulation/model to be produced. The goal here is to create a model that can (help) predict performance of certain sets of stocks. This is the backbone of the second and more indirect part of the objective, which more of a service. We will provide this model to our clients and portfolio managers will use it to help serve their clients in a more accurate way. We are providing a product and the backbone of a service for our clients to provide.</p>" +
+            "<br>" +
+            "<h3>Solution</h3>" +
+            "<p style='text-align: justify'>Our proposed solution makes use of our background in computational sciences to implement a software approach to multi-factor statistical analysis. We aim to create a system which aids in the creation and management of an investment portfolio based upon well-defined statistical models and machine learning algorithms, which consistently outperforms the market. Such a system would not only increase profits for portfolio owners, but it would also reduce risk by eliminating erroneous human action and increasing decision-making speed in a volatile stock market.</p>" +
+            "<p></p>";
+            $('#div-main').html(html);
+        }
         function showResume() {
             var resumeHTML = 
             "<h1>Resume</h1> <br><br>" +
@@ -164,5 +209,4 @@
         }
     </script>
 </body>
-
 </html>
